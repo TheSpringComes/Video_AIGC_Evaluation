@@ -4,6 +4,8 @@ Videos storage path:
 
 + original  videos: ./vids/inp
 + generated videos: ./vids/out
+
+
 The corresponding videos in the two dirs should have the same name, same size and same number of frames
 
 ## 1. PSNR
