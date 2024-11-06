@@ -12,7 +12,7 @@ The corresponding videos in the two dirs should have the same name, same size an
 
 PSNR code is in the dir ./PSNR
 
-run the following code to evaluate PSNR value:
+run the following shell to evaluate PSNR value:
 
 ```shell
 cd PSNR
@@ -23,7 +23,7 @@ python video_psnr.py
 ## 2. SSIM
 
 SSIM code is in the dir ./SSIM
-run the following code to evaluate SSIM value:
+run the following shell to evaluate SSIM value:
 
 ```shell
 cd SSIM
@@ -35,7 +35,7 @@ python video_ssim.py
 
 LPIPS code is in the dir ./PerceptualSimilarity
 
-run the following code to evaluate LPIPS value:
+run the following shell to evaluate LPIPS value:
 
 ```shell
 cd PerceptualSimilarity
@@ -56,7 +56,7 @@ DOVER code is in the dir ./DOVER
 
 (1) download the pretrained model from [**DOVER**](https://github.com/QualityAssessment/DOVER/releases/download/v0.1.0/DOVER.pth), and remove DOVER.pth to ./DOVBER/pretrained_weights
 
-(2) run the code to evaluate DOVER value:
+(2) run the shell to evaluate DOVER value:
 
 ```shell
 cd DOVER
@@ -83,3 +83,25 @@ MUSIQ code is in the dir ./MUSIQ
 - **imagenet_pretrain.npz**: Pretrained checkpoint on ImageNet. (not recommended)
 
 In our evalutaion, we use koniq_ckpt.npz
+
+(3) Run the following shells:
+
+Open the dir:
+
+```shell
+cd MUSIQ
+```
+
+Process video frames to images:
+
+```shell
+python process_videos.py --video_paths ../vids/out --images_path ../vids/out_imgs
+```
+
+In folder out_imgs, there are many sub-folders that have the same name with the corresponding videos. Each folder contains images of video frames. The name of the images are 0001.jpg, 0002.jpg...
+
+Run the shell to evaluate the musiq value:
+
+```shell
+python run_predict_videos.py
+```
