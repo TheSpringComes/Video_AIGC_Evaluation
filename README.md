@@ -68,3 +68,18 @@ python evaluate_a_set_of_videos.py
 ```
 
 ## 6. MUSIQ
+
+MUSIQ code is in the dir ./MUSIQ
+
+(1) This code is based on tensorflow framework. So first you need to install the packages following requirments.txt
+
+(2) Download the model checkpoints from:
+[gcloud directory link](https://console.cloud.google.com/storage/browser/gresearch/musiq)
+
+- **ava_ckpt.npz**: Trained on AVA dataset. (not recommended)
+- **koniq_ckpt.npz**: Trained on KonIQ dataset.
+- **paq2piq_ckpt.npz**: Trained on PaQ2PiQ dataset.
+- **spaq_ckpt.npz**: Trained on SPAQ dataset.
+- **imagenet_pretrain.npz**: Pretrained checkpoint on ImageNet. (not recommended)
+
+In our evalutaion, we use koniq_ckpt.npz
