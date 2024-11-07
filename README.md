@@ -122,13 +122,13 @@ Simply provide the path to the video file, or the path to the folder that contai
 single dimension:
 
 ```shell
-python evaluate.py --dimension subject_consistency --videos_path ./vids/out/
+python evaluate.py --dimension subject_consistency --videos_path ../vids/out/
 ```
 
 multiple dimesions:
 
 ```shell
-python evaluate.py --dimension subject_consistency background_consistency motion_smoothness dynamic_degree aesthetic_quality imaging_quality  --videos_path ./vids/out/
+python evaluate.py --dimension subject_consistency background_consistency motion_smoothness dynamic_degree aesthetic_quality imaging_quality  --videos_path ../vids/out/
 ```
 
 To evaluate using multiple gpus, we can use the following commands:
