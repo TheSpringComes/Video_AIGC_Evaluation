@@ -47,10 +47,7 @@ python lpips_2vids.py
 python lpips_2vid_dirs.py
 ```
 
-## 4. $E^*_{warp}$
-
-
-## 5. DOVER
+## 4. DOVER
 
 DOVER code is in the dir ./DOVER
 
@@ -67,7 +64,7 @@ cd DOVER
 python evaluate_a_set_of_videos.py
 ```
 
-## 6. MUSIQ
+## 5. MUSIQ
 
 MUSIQ code is in the dir ./MUSIQ
 
@@ -104,4 +101,38 @@ Run the shell to evaluate the musiq value:
 
 ```shell
 python run_predict_videos.py
+```
+
+## 6. VBench
+
+VBench code is in the dir ./VBench:
+
+Install with git clone
+
+```shell
+    cd VBench
+    pip install -r VBench/requirements.txt
+    pip install VBench
+```
+
+Simply provide the path to the video file, or the path to the folder that contains your videos. There is no requirement on the videos' names.
+
++ Note: Support customized videos / prompts for the following dimensions: `'subject_consistency', 'background_consistency', 'motion_smoothness', 'dynamic_degree', 'aesthetic_quality', 'imaging_quality'`
+
+single dimension:
+
+```shell
+python evaluate.py --dimension subject_consistency --videos_path ./vids/out/
+```
+
+multiple dimesions:
+
+```shell
+python evaluate.py --dimension subject_consistency background_consistency motion_smoothness dynamic_degree aesthetic_quality imaging_quality  --videos_path ./vids/out/
+```
+
+To evaluate using multiple gpus, we can use the following commands:
+
+```shell
+torchrun --nproc_per_node=${GPUS} --standalone evaluate.py ...args...
 ```
