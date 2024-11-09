@@ -7,13 +7,32 @@ matplotlib
 scipy
 numpy
 tqdm
-timm
 einops
 wandb
 scikit-video
+Pillow
+timm>=0.9
+wheel
+cython
+tensorboard
+scikit-learn
+openai-clip
+requests
+pyyaml
+pyiqa==0.1.10
+lvis
+fairscale>=0.4.4
+fvcore
+easydict
+urllib3
+boto3
+omegaconf
+transformers==4.33.2
+pycocoevalcap
 thop==0.0.31-2005241907
 scikit-image>=0.13.0
 jupyter
+moviepy==2.0.0.dev1
 
 # tensorflow
 absl-py>=0.12.0

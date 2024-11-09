@@ -1,14 +1,30 @@
 # AIGC videos Test
 
-## Dataset
+## **Dataset**
 
-1. REDS30
+### 1. 🎞️ REDS30 Dataset
 
-download [here](https://seungjunnah.github.io/Datasets/reds.html)
+The datasets can be downloaded [here](https://seungjunnah.github.io/Datasets/reds.html).
 
 This dataset consists of 300 video sequences with a resolution of 720 × 1280, each with 100 frames. The training set, validation set, and test set each have 240, 30, and 30 videos, respectively.
 
-## Evaluation Metrics
+### 2. 🎞️ YouHQ40 Dataset
+
+The datasets are hosted on Google Drive
+
+| Dataset | Link | Description|
+| :----- | :--: | :---- |
+| YouHQ-Train | [Google Drive](https://drive.google.com/file/d/1f8g8gTHzQq-cKt4s94YQXDwJcdjL59lK/view?usp=sharing)| 38,576 videos for training, each of which has around 32 frames.|
+| YouHQ40-Test| [Google Drive](https://drive.google.com/file/d/1rkeBQJMqnRTRDtyLyse4k6Vg2TilvTKC/view?usp=sharing) | 40 video clips for evaluation, each of which has around 32 frames.|
+
+Run the shell to change the videos to 96 frames: (download the data and stored in folder datasets/YouHQ40/train and datasets/YouHQ40/test)
+
+```shell
+cd datasets # Assuming the data is stored in this folder
+python process_YouHQ.py
+```
+
+## **Evaluation Metrics**
 
 Videos storage path:
 
@@ -60,7 +76,7 @@ python lpips_2vid_dirs.py
 
 DOVER code is in the dir ./DOVER
 
-(1) download the pretrained model from [**DOVER**](https://github.com/QualityAssessment/DOVER/releases/download/v0.1.0/DOVER.pth), and remove DOVER.pth to ./DOVBER/pretrained_weights
+(1) download the pretrained model from [**DOVER**](https://github.com/QualityAssessment/DOVER/releases/download/v0.1.0/DOVER.pth), and remove DOVER.pth to ./DOVER/pretrained_weights
 
 (2) run the shell to evaluate DOVER value:
 
