@@ -1,14 +1,23 @@
-# Test videos
+# AIGC videos Test
+
+## Dataset
+
+1. REDS30
+
+download [here](https://seungjunnah.github.io/Datasets/reds.html)
+
+This dataset consists of 300 video sequences with a resolution of 720 × 1280, each with 100 frames. The training set, validation set, and test set each have 240, 30, and 30 videos, respectively.
+
+## Evaluation Metrics
 
 Videos storage path:
 
 + original  videos: ./vids/inp
 + generated videos: ./vids/out
 
-
 The corresponding videos in the two dirs should have the same name, same size and same number of frames
 
-## 1. PSNR
+### 1. PSNR
 
 PSNR code is in the dir ./PSNR
 
@@ -20,7 +29,7 @@ cd PSNR
 python video_psnr.py
 ```
 
-## 2. SSIM
+### 2. SSIM
 
 SSIM code is in the dir ./SSIM
 run the following shell to evaluate SSIM value:
@@ -31,7 +40,7 @@ cd SSIM
 python video_ssim.py
 ```
 
-## 3. LPIPS
+### 3. LPIPS
 
 LPIPS code is in the dir ./PerceptualSimilarity
 
@@ -47,7 +56,7 @@ python lpips_2vids.py
 python lpips_2vid_dirs.py
 ```
 
-## 4. DOVER
+### 4. DOVER
 
 DOVER code is in the dir ./DOVER
 
@@ -64,7 +73,7 @@ cd DOVER
 python evaluate_a_set_of_videos.py
 ```
 
-## 5. MUSIQ
+### 5. MUSIQ
 
 MUSIQ code is in the dir ./MUSIQ
 
@@ -103,7 +112,7 @@ Run the shell to evaluate the musiq value:
 python run_predict_videos.py
 ```
 
-## 6. VBench
+### 6. VBench
 
 VBench code is in the dir ./VBench:
 
