@@ -1,5 +1,10 @@
 import os
 import cv2
+import argparse
+
+parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+parser.add_argument('--path', type=str, default='./VideoGen-Eval1.0')
+args = parser.parse_args()
 
 def list_files_info(folder_path):
     # 检查文件夹是否存在
@@ -7,7 +12,7 @@ def list_files_info(folder_path):
         print("指定的路径不是文件夹或不存在。")
         return
 
-    txt_file = open('satisfactory_video.txt', 'w')
+    txt_file = open('qualified_video.txt', 'w')
     # 遍历文件夹下的所有文件
     cnt, cnt_new = 0, 0
     for root, dirs, files in os.walk(folder_path):
@@ -33,7 +38,7 @@ def list_files_info(folder_path):
             cnt += 1
     print(f"共检测到 {cnt} 个视频文件，其中 {cnt_new} 个视频文件帧数大于等于 77 帧且 分辨率大于等于 512x512。")
     txt_file.close()
-    print("视频信息已保存到 satisfactory_video.txt 文件。")
+    print("视频信息已保存到 qualified_video.txt 文件。")
 
 # 调用函数，替换 'your_folder_path' 为实际文件夹路径
-list_files_info('./VideoGen-Eval1.0')
+list_files_info(args.path)
