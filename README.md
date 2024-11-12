@@ -24,6 +24,16 @@ cd datasets # Assuming the data is stored in this folder
 python process_YouHQ.py
 ```
 
+### 3. 🎞️ Customized AIGC Dataset
+
+Put the dataset in ./datasets, and then run the shell to filter qualified videos.
+
+```shell
+python filter_video.py --path ./VideoGen-Eval1.0
+```
+
+The qualified paths will be saved in `qualified_video.txt`. You can read this txt to load the qualified videos.
+
 ## **Evaluation Metrics**
 
 Videos storage path:
@@ -98,11 +108,11 @@ MUSIQ code is in the dir ./MUSIQ
 (2) Download the model checkpoints from:
 [gcloud directory link](https://console.cloud.google.com/storage/browser/gresearch/musiq)
 
-- **ava_ckpt.npz**: Trained on AVA dataset. (not recommended)
-- **koniq_ckpt.npz**: Trained on KonIQ dataset.
-- **paq2piq_ckpt.npz**: Trained on PaQ2PiQ dataset.
-- **spaq_ckpt.npz**: Trained on SPAQ dataset.
-- **imagenet_pretrain.npz**: Pretrained checkpoint on ImageNet. (not recommended)
++ **ava_ckpt.npz**: Trained on AVA dataset. (not recommended)
++ **koniq_ckpt.npz**: Trained on KonIQ dataset.
++ **paq2piq_ckpt.npz**: Trained on PaQ2PiQ dataset.
++ **spaq_ckpt.npz**: Trained on SPAQ dataset.
++ **imagenet_pretrain.npz**: Pretrained checkpoint on ImageNet. (not recommended)
 
 In our evalutaion, we use koniq_ckpt.npz
 
