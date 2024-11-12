@@ -29,6 +29,7 @@ python process_YouHQ.py
 Put the dataset in ./datasets, and then run the shell to filter qualified videos.
 
 ```shell
+cd datasets
 python filter_video.py --path ./VideoGen-Eval1.0
 ```
 
